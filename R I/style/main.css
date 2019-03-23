@@ -1,0 +1,79 @@
+body{
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 980px;
+    height: 122px;
+    margin: 20px 185px 0;
+    background-color: black;
+}
+header img{
+    margin: 32px 0 0 30px;
+}
+header form{
+    margin: -35px 10px 0 610px;
+}
+#tdd{
+    padding: 0 17px;
+}
+#tdd input{
+    width: 150px;
+    height: 18px;
+    border: none;
+}
+#tdd2 input{
+    margin: -2px 0 0 0;
+    width: 148px;
+    height: 18px;
+    background-color: rgba(72, 72, 72, 0.76);
+    border: none;
+    color: #f7f7f7;
+}
+#tdd input[type="text"]{
+    padding:0 0 0 2px;
+    font-size: 11px;
+}
+#tdd2 input[type="text"]{
+    padding:0 0 0 2px;
+    font-size: 12px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: rgba(24, 27, 24, 0.74);
+}
+#topmenu{
+    padding: 0 20px 0;
+    float: right;
+    list-style: none;
+    margin: 25px 42px 0px 0px;
+}
+#topmenu li{
+    float: left;
+    color: #f7f7f7;
+}
+#topmenu a{
+    display: block;
+    text-decoration: none;
+    font-size: 75%;
+    padding: 10px 25px 8px;
+}
+#topmenu a:hover{
+    background-color: rgba(72, 72, 72, 0.76);
+}
+#topmenu span{
+    color: #f7f7f7;
+}
+#greenmenu{
+    background: linear-gradient(180deg, #82c700 0%, #7ac000 20%, #68a800 60%, #5e8700 100%);
+    width: 980px;
+    height: 45px;
+    padding: 0px;
+    margin: -24px 185px 0;
+}
+#greenmenu h3{
+    color: #f7f7f7;
+    font-size: 150%;
+    margin-left: 22px;
+    padding: 7px 0;
+}

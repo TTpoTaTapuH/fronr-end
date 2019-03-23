@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Как создать свой сайт</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" href="styles/main.css" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var w = $(window).width();
+			if (w <= 768) {
+				$("#left").html($("#left").html() + $("#right").html());
+				$("#right").remove();
+			}
+			if (w <= 600) {
+				var h2 = $("#course h2");
+				$("#course h2").remove();
+				$(h2).prependTo("#course");
+			}
+			if (w <= 468) {
+				$("#top_sep").replaceWith("<br /><br />");
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1>&lt;ElectronicTatarstan.ru /&gt;</h1>
+			<nav>
+				<ul id="topmenu">
+					<li>
+						<a href="#">
+							<span>Главная</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="active">
+							<span>Видеокарты</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>ОЗУ</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Процессоры</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Мониторы</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Мышки</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Клавиатура</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div id="top">
+			<div class="clear"></div>
+			<div id="search">
+				<form name="search" action="#" method="get">
+					<table>
+						<tr>
+							<td>
+								<input type="text" name="query" placeholder="Поиск" />
+							</td>
+							<td>
+								<input type="submit" name="search" value="" />
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div id="auth">
+				<form name="auth" action="#" method="post">
+					<div>
+						<input type="text" name="login" placeholder="Логин" />
+						<input type="password" name="password" placeholder="Пароль" />
+						<input type="submit" name="auth" value="Войти" />
+					</div>
+				</form>
+				<img src="images/bg_item_top.png" alt="" id="top_sep" />
+				<img src="images/icon_register.png" alt="" id="icon_register" />
+				<a href="#" id="link_register">Регистрация</a>
+				<img src="images/bg_item_top.png" alt="" />
+				<div id="links_reset">
+					<a href="#">Забыли пароль?</a>
+					<a href="#">Забыли логин?</a>
+				</div>
+			</div>
+		</div>
+		<div id="slider">
+			<div id="course">
+				<img src="images/comp.jpg" alt="Отзывы о товарах." />
+				<h2>Современная электроника.</h2>
+				<section>
+					<p>Современный уровень развития производства позволил оснастить наши дома совершенно новым поколением бытовой техники. Облегчают работу по дому такие электрические помощники, как пылесосы, полотеры, посудомоечные и стиральные машины.</p>
+					<p>С помощью некоторых моделей бытовых электропылесосов не только в 2,5-3 раза удается сократить время, затрачиваемое на уборку квартиры, но и успешно побелить потолок, стены, увлажнить воздух в помещении. А мойка посуды при помощи посудомоечной машины позволит сэкономить до 12-15% времени, а  также помогает эффективнее использовать воду и моющие средства.</p>
+					<a class="more" href="#">Подробнее</a>
+				</section>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="content">
+			<div id="left">
+				<div class="block">
+					<div class="header">Категории</div>
+					<div class="content">
+						<nav>
+							<div>
+								<a class="active" href="#">ПК</a>
+								<div>
+									<a href="#">Компьютеры</a>
+								</div>
+								<div>
+									<a href="#">Ноутбуки</a>
+								</div>
+							</div>
+							<div>
+								<a href="#">Планшеты</a>
+							</div>
+							<div>
+								<a href="#">Ультрабуки</a>
+							</div>
+							<div>
+								<a href="#">Мобильные телефоны</a>
+							</div>
+							<div>
+								<a href="#">Асики</a>
+							</div>
+							<div>
+								<a href="#">Запчасти</a>
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="block">
+					<div class="header">Подписка</div>
+					<div class="content">
+						<div id="subscribe_vk">
+							<div id="subscribe">
+								<p>Подписавшись по <b>E-mail</b>, Вы будете получать уведомления о новых статьях.</p>
+								<img src="images/icon_rss.png" alt="Подписка" />
+								<a href="#" class="button">Подписаться</a>
+							</div>
+							<div class="clear"></div>
+							<img id="subscribe_vk_sep" src="images/menu_sep.png" alt="" />
+							<div class="clear"></div>
+							<div id="vk">
+								<p>Добавляйтесь ко мне в друзья <b>ВКонтакте</b>! Отзывы о сайте и обо мне оставляйте на стене моего аккаунта.</p>
+								<img src="images/icon_vk.png" alt="Мой аккаунт" />
+								<a href="#" class="button">Мой аккаунт</a>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="header">Опрос</div>
+					<div class="content">
+						<div id="poll">
+							<p>Ваша любимая рубрика?</p>
+							<form name="poll" action="#" method="post">
+								<div>
+									<input id="poll_id_1" type="radio" name="poll_id" value="1" />
+									<label for="poll_id_1">Ноутбук</label>
+								</div>
+								<div>
+									<input id="poll_id_2" type="radio" name="poll_id" value="2" />
+									<label for="poll_id_2">Компьютер</label>
+								</div>
+								<div>
+									<input id="poll_id_3" type="radio" name="poll_id" value="3" />
+									<label for="poll_id_3">Планшет</label>
+								</div>
+								<div>
+									<input id="poll_id_4" type="radio" name="poll_id" value="4" />
+									<label for="poll_id_4">Мобильный телефон</label>
+								</div>
+								<div>
+									<input type="submit" name="poll" value="Голосовать" class="button" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="right">
+				<div class="block">
+					<div class="header">Хитрости программиста.</div>
+					<div class="content">
+						<div class="free">
+							<p class="title">Как лучше выбирать компьютер.</p>
+							<img src="images/freephp-cover.png" alt="Программисты шутят." />
+							<p><b>Особенности:</b></p>
+							<p>- Модель процессора</p>
+							<p>- Скорость четния данных</p>
+							<p>- Жёсткие диски</p>
+							<p>- Поиск по сайту</p>
+							<p class="center"><b>Чтобы получить информацию,<br />заполните форму</b></p>
+							<form name="free_course" action="#" method="post">
+								<table>
+									<tr>
+										<td>
+											<label for="free_course_email">E-mail:</label>
+										</td>
+										<td>
+											<input id="free_course_email" type="text" name="email" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="free_course_name">Имя:</label>
+										</td>
+										<td>
+											<input id="free_course_name" type="text" name="name" />
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="center">
+											<input type="submit" name="free_course" value="Получить курс" class="button" />
+										</td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="header">Семинар</div>
+					<div class="content">
+						<div class="free">
+							<p class="title">Как собрать мощный компьютер?</p>
+							<img src="images/create-im.png" alt="Как собрать мощный компьютер" />
+							<p><b>После прочтения:</b></p>
+							<p>- Вы будете знать, как стоится компьютер.</p>
+							<p>- Вы получите бесплатный подарок с подробным описанием каждого шага.</p>
+							<p>- Вы сможете уже приступить к созданию своего мощного ПК.</p>
+							<div class="center">
+								<a href="#" class="button">Записаться</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="header">Умные цитаты</div>
+					<div class="content">
+						<div id="quote">
+							<p>Ты никогда не решишь проблему, если будешь думать так же, как те, кто ее создал.</p>
+							<p class="right"><i>Альберт Эйнштейн</i></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="center">
+				<div class="main">
+					<nav>
+						<p>Вы здесь: Главная</p>
+					</nav>
+					<article>
+						<h1>Польза гаджетов в 21 веке.</h1>
+						<div class="article_img">
+							<img src="images/gadjet.jpg" alt="Польза гаджетов в 21 веке." />
+						</div>
+						<p>Ежедневно, ежечасно практически все люди пользуются различного рода гаджетами, большинство из которых еще несколько десятилетий назад можно было встретить только в книгах писателей-фантастов. Можно сказать, что из гаджетов, по сути, состоит вся современная жизнь, причем на протяжении нескольких последних лет можно наблюдать, как электроника быстро совершенствуется и улучшается, идя в ногу с так же стремительно развивающейся техникой.</p>
+						<p>То, о чем раньше обычный человек не мог даже мечтать, сегодня распространено повсюду, более того, практически любому – в наши дни каждый может позволить себе купить фотоаппарат или мобильный телефон, более того, на такие вещи существует своя мода, они даже являются показателем определенного статуса своих владельцев.</p>
+						<p>Многие современные гаджеты представлены довольно необычными устройствами, сегодня уже не являются редкостью, например, флешки, корпус которых можно использовать в качестве открывалки для бутылок или носить, как украшение. Те, кто желает приобрести стационарный компьютер, вполне могут купить видеокарту, материнскую плату и другие комплектующие по отдельности и собрать именно ту машину, характеристики которой будут в полной мере соответствовать всем требованиям владельца – и в этом нет ничего сложного.</p>
+						<p>Особого внимания заслуживают гаджеты-подарки, которые люди с удовольствием приобретают для того, чтобы порадовать своих близким оригинальным презентом. Причудливые приспособления для компьютера и дорогостоящие дизайнерские вещи – все это сегодня предлагает большинство магазинов электроники и бытовой техники. Достаточно выбрать веб-камеру, встроенную в симпатичную мягкую игрушку, компьютерную мышь, корпус которой полностью выполнен из дерева или купить наушники в виде смешных игрушек, крепящихся на ушные раковины – и вы, в большинстве случаев, покорите виновника торжества. Особенно восприимчивы к подобного рода подаркам мужчины, для которых придумано немало чисто «мужских» устройств. Правда, мужчины довольно редко покупают их себе сами, а вот в качестве подарков принимают с большим удовольствием.</p>
+						<p>Конечно, во всем многообразии современных гаджетов встречается немало и тех, функциональность и польза которых сомнительна – чаще всего они не лишены определенной доли юмора, а потому находят применения в качестве недорогих веселых сюрпризов.</p>
+					</article>
+				</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<footer>
+			<div class="sep"></div>
+			<!-- Yandex.Metrika counter -->
+			<div style="display:none;">
+				<script type="text/javascript">
+					(function(w, c) {
+						(w[c] = w[c] || []).push(function() {
+						   try {
+							  w.yaCounter3932665 = new Ya.Metrika(3932665);
+							   yaCounter3932665.clickmap(true);
+							   yaCounter3932665.trackLinks(true);     
+						   } catch(e) { }
+					   });
+					})(window, 'yandex_metrika_callbacks');
+				</script>
+			</div>
+			<script src="/mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+			<noscript>
+				<div style="position:absolute">
+					<img src="/mc.yandex.ru/watch/3932665" alt="" />
+				</div>
+			</noscript>
+			<!-- /Yandex.Metrika counter -->
+			<!--LiveInternet counter-->
+			<script type="text/javascript">
+			<!--
+				document.write("<a href='http://www.liveinternet.ru/click' "+
+				"target=_blank><img src='//counter.yadro.ru/hit?t21.11;r"+
+				escape(document.referrer)+((typeof(screen)=="undefined")?"":
+				";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+				screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+				";"+Math.random()+
+				"' alt='' title='LiveInternet: показано число просмотров за 24"+
+				" часа, посетителей за 24 часа и за сегодня' "+
+				"border='0' width='88' height='31'><\/a>")
+			//-->
+			</script>
+			<!--/LiveInternet-->
+			<!-- Rating@Mail.ru counter -->
+			<script type="text/javascript">
+				//<![CDATA[
+				var a='';js=10;d=document;
+				try{a+=';r='+escape(d.referrer);}catch(e){}try{a+=';j='+navigator.javaEnabled();js=11;}catch(e){}
+				try{s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;}catch(e){}
+				try{if(typeof((new Array).push('t'))==="number")js=13;}catch(e){}
+				try{d.write('<a href="http://top.mail.ru/jump?from=1883459"><img src="http://dd.cb.bc.a1.top.mail.ru/counter?id=1883459;t=230;js='+js+
+				a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" style="border:0;" height="31" width="88" \/><\/a>');}catch(e){}
+				//]]>
+			</script>
+			<noscript>
+				<p>
+					<a href="http://top.mail.ru/jump?from=1883459">
+						<img src="http://dd.cb.bc.a1.top.mail.ru/counter?js=na;id=1883459;t=230" style="border: 0; height: 31px; width: 88px;"
+						alt="Рейтинг@Mail.ru" />
+					</a>
+				</p>
+			</noscript>
+			<!-- //Rating@Mail.ru counter -->
+			<!-- begin of Top100 code -->
+			<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2243752"></script>
+			<noscript>
+				<p>
+					<a href="http://top100.rambler.ru/navi/2243752/">
+						<img src="http://counter.rambler.ru/top100.cnt?2243752" alt="Rambler's Top100" />
+					</a>
+				</p>
+			</noscript>
+			<!-- end of Top100 code -->
+			<p>Copyright &copy; 2017-2018 Electronics. Все права защищены.</p>
+		</footer>
+	</div>
+</body>
+</html>

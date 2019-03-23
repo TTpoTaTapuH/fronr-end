@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Как создать новый сайт</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+    <link rel="favicon.ico ; shortcut icon" type="image/x-icon"/>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>&lt;MyIlgizar.ru /&gt;</h1>
+            <nav>
+                <ul id="topmenu">
+                    <li>
+                        <a href="index.html">
+                            <span>Главная</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" class="active">
+                            <span>Об авторе</span>
+                        </a>
+                    </li>            
+                    <li>
+                        <a href="magazin.html">
+                            <span>Магазин ноутбуков</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ovoch.html">
+                            <span>Овощи</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Стол заказов</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="back.html">
+                            <span>Обратная связь</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Мой блог</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+		
+    </div>
+	<div>
+        <img id="img1" src="images/acer.jpg" data-price="23000" width="300" height="300" alt="" draggable="true" ondragstart="dragStart(event)" />23000 рублей
+        <img id="img2" src="images/asus.jpg" data-price="37000" width="300" height="300" alt="" draggable="true" ondragstart="dragStart(event)"/>37000 рублей
+        <img id="img3" src="images/msi.jpg" data-price="50000" width="300" height="300" alt="" draggable="true" ondragstart="dragStart(event)"/>50000 рублей
+</div>
+<div ondrop="drop(event)" ondragover="dragOver(event)">
+   Корзина. Стоимость заказа: <input disabled="" id="price" value="0"/><br/>
+</div>
+
+
+<script type="text/javascript">
+    var price = 0;
+function dragStart(event){
+    event.dataTransfer.setData("text/plain", event.target.id);
+}
+
+function dragOver(event){
+    event.preventDefault();
+}
+
+function drop(event){
+    event.preventDefault();
+    var img = event.dataTransfer.getData("text/plain");
+    var new_img = document.getElementById(img).cloneNode(true);
+    event.target.appendChild(new_img);
+    price+=parseInt(document.getElementById(img).getAttribute("data-price"));
+    document.getElementById("price").value = price;
+}
+
+</script>
+</body>
+</html>
